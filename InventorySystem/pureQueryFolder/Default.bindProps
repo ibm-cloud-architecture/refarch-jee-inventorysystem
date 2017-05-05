@@ -1,0 +1,11 @@
+# Provide the default bind properties for the SQL statements in your application 
+# on a line that begins with defaultOptions, as in this example:
+#    defaultOptions= -bindOptions "qualifier yourSchema"
+
+# If you are developing a pureQuery application, provide bind properties 
+# for specific interfaces that declare annotated methods, as in this example:
+#    com.yourClass = -bindOptions "qualifier yourSchemaForClass"
+# These bind options override the options that you specify on the defaultOptions line.
+
+# The content assistance in this editor can show you the options that are available. 
+# Press CTRL+Space or your default keystroke for this assistance as you are specifying options.

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><programSet version="1">
+    <origin>
+        <originType>Analysis</originType>
+    </origin>
+    <statementSet name="com.issw.inventory.data.ProductInlineSample">
+        <statementSetMetadata>
+            <sourceFile>
+                <name>ProductInlineSample.java</name>
+                <container>/InventorySystem/ejbModule/com/issw/inventory/data</container>
+            </sourceFile>
+            <javaInterface>
+                <name>ProductInlineSample</name>
+                <container>com.issw.inventory.data</container>
+            </javaInterface>
+        </statementSetMetadata>
+        <statements>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">SELECT *  FROM PRODUCT</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>beans</methodName>
+                        <sourceCodeLineNumber>46</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">queryIterator("SELECT *" + "  FROM PRODUCT",Product.class)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">SELECT *  FROM PRODUCT  WHERE SKU = :sku</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>testSelect</methodName>
+                        <sourceCodeLineNumber>74</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">queryFirst("SELECT *" + "  FROM PRODUCT" + "  WHERE SKU = :sku",Product.class,bean)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">UPDATE PRODUCT  SET INSTOCK = :stock, VERSION = :version, SUPP_ID = :supplierId  WHERE SKU = :sku</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>testUpdate</methodName>
+                        <sourceCodeLineNumber>87</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">update("UPDATE PRODUCT" + "  SET INSTOCK = :stock, VERSION = :version, SUPP_ID = :supplierId" + "  WHERE SKU = :sku",bean)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">SELECT *  FROM PRODUCT</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>testUpdate</methodName>
+                        <sourceCodeLineNumber>92</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">queryIterator("SELECT *" + "  FROM PRODUCT",Product.class)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">DELETE FROM PRODUCT WHERE SKU = :sku</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>testDelete</methodName>
+                        <sourceCodeLineNumber>101</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">update("DELETE FROM PRODUCT" + " WHERE SKU = :sku",bean)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">SELECT *  FROM PRODUCT</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>testDelete</methodName>
+                        <sourceCodeLineNumber>103</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">queryIterator("SELECT *" + "  FROM PRODUCT",Product.class)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">INSERT INTO PRODUCT (SKU, INSTOCK, VERSION, SUPP_ID)  VALUES (:sku, :stock, :version, :supplierId)</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>testInsert</methodName>
+                        <sourceCodeLineNumber>113</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">update("INSERT INTO PRODUCT (SKU, INSTOCK, VERSION, SUPP_ID)" + "  VALUES (:sku, :stock, :version, :supplierId)",bean)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">SELECT *  FROM PRODUCT</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>testInsert</methodName>
+                        <sourceCodeLineNumber>117</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">queryIterator("SELECT *" + "  FROM PRODUCT",Product.class)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+        </statements>
+    </statementSet>
+</programSet>

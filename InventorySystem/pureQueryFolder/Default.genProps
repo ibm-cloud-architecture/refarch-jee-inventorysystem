@@ -1,0 +1,17 @@
+# Provide the default properties that the pureQuery generator stores in generated implemenation classes 
+# and that the pureQuery StaticBinder uses during a bind operation. Here is an example:
+#    defaultOptions= -collection yourCollection
+
+# Provide properties for specific interfaces that declare annotated methods, as in this example:
+#    com.yourClass = -collection yourCollectionForClass 
+# These options override the options that you specify on the defaultOptions line.
+
+# If you have enabled SQL capturing and binding for JDBC applications 
+# and you are configuring the static execution of SQL statements in a JDBC application,
+# provide bind properties for all of the SQL statements in a capture.pdqxml file, as in this example: 
+#    capture.pdqxml= -rootPkgName yourPreferredRootPkgName 
+# The option -rootPkgName is mandatory.
+
+# The content assistance in this editor can show you the options that are available. 
+# Press CTRL+Space or your default keystroke for this assistance as you are specifying options.
+

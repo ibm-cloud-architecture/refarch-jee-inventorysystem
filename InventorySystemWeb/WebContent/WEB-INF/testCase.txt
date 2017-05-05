@@ -1,0 +1,4 @@
+# pureUqery TEST CASE
+
+com.issw.inventory.tests.InventoryServiceTest
+

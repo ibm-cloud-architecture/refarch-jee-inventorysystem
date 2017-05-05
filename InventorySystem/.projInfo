@@ -1,0 +1,7 @@
+#Wed Nov 04 11:43:25 EST 2009
+generateSchema=false
+ConnectionName=INDB
+DSDLevel=22
+currentPath=SYSIBM,SYSFUN,SYSPROC,SYSIBMADM,DB2INST1
+currentSchema=DB2INST1
+enableSqlCapturing=false

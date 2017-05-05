@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name>
+	InventorySystemWeb</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<description>
+		</description>
+		<display-name>
+		JUnitEEServlet</display-name>
+		<servlet-name>JUnitEEServlet</servlet-name>
+		<servlet-class>
+		org.junitee.servlet.JUnitEEServlet</servlet-class>
+		
+		<run-as>
+			<role-name>storeAdmin</role-name>
+		</run-as>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JUnitEEServlet</servlet-name>
+		<url-pattern>/Test</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+		<display-name>
+		SecureTest</display-name>
+		<web-resource-collection>
+			<web-resource-name>Test</web-resource-name>
+			<url-pattern>/Test</url-pattern>
+			<url-pattern>/Test/*</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>PUT</http-method>
+			<http-method>HEAD</http-method>
+			<http-method>TRACE</http-method>
+			<http-method>POST</http-method>
+			<http-method>DELETE</http-method>
+			<http-method>OPTIONS</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<description>
+			storeAdmin</description>
+			<role-name>storeAdmin</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>Test</realm-name>
+	</login-config>
+	<security-role>
+		<role-name>storeAdmin</role-name>
+	</security-role>
+	<resource-ref id="ResourceRef_1207052847328">
+		<description>
+		</description>
+		<res-ref-name>jdbc/inds</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Shareable</res-sharing-scope>
+	</resource-ref>
+</web-app>

@@ -1,0 +1,11 @@
+#Wed Nov 04 11:43:25 EST 2009
+url=jdbc\:db2\://localhost\:60000/INDB\:retrieveMessagesFromServerOnGetMessage\=true;
+driverName=com.ibm.db2.jcc.DB2Driver
+profileProviderID=org.eclipse.datatools.enablement.ibm.db2.luw.connectionProfile
+jarList=/opt/IBM/SDPShared/plugins/com.ibm.datatools.db2_2.1.0.v20090605_2309/driver/db2jcc4.jar\:/opt/IBM/SDPShared/plugins/com.ibm.datatools.db2_2.1.0.v20090605_2309/driver/db2jcc4_license_cisuz.jar
+userid=db2inst1
+version=V9.5
+databaseName=INDB
+conName=INDB
+driverDefinitionID=DriverDefn.com.ibm.datatools.db2.luw.jdbc4.driverTemplate.IBM Data Server Driver for JDBC and SQLJ (JDBC 4.0) Default
+product=DB2 UDB

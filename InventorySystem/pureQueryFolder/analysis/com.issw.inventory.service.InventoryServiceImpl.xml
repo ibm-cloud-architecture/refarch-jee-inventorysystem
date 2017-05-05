@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><programSet version="1">
+    <origin>
+        <originType>Analysis</originType>
+    </origin>
+    <statementSet name="com.issw.inventory.service.InventoryServiceImpl">
+        <statementSetMetadata>
+            <sourceFile>
+                <name>InventoryServiceImpl.java</name>
+                <container>/InventorySystem/ejbModule/com/issw/inventory/service</container>
+            </sourceFile>
+            <javaInterface>
+                <name>InventoryServiceImpl</name>
+                <container>com.issw.inventory.service</container>
+            </javaInterface>
+        </statementSetMetadata>
+        <statements>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">select SKU, INSTOCK, VERSION, SUPP_ID from PRODUCT where SKU = ?</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>accessProduct</methodName>
+                        <sourceCodeLineNumber>20</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">queryFirst("select SKU, INSTOCK, VERSION, SUPP_ID from PRODUCT where SKU = ?",Product.class,sku)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">update PRODUCT set SKU = :sku, INSTOCK = :stock, VERSION = :version + 1, SUPP_ID = :supplierId where SKU = :sku and VERSION = :version</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>updateProduct</methodName>
+                        <sourceCodeLineNumber>26</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">update("update PRODUCT set SKU = :sku, INSTOCK = :stock, VERSION = :version + 1, SUPP_ID = :supplierId where SKU = :sku and VERSION = :version",product)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">insert into PRODUCT (SKU, INSTOCK, VERSION, SUPP_ID) values( :sku, :stock, 1, :supplierId)</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>insertProduct</methodName>
+                        <sourceCodeLineNumber>33</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">update("insert into PRODUCT (SKU, INSTOCK, VERSION, SUPP_ID) values( :sku, :stock, 1, :supplierId)",product)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+            <statement>
+                <statementDescriptor>
+                    <prepareSQL type="S">DELETE FROM PRODUCT where SKU = :sku and VERSION = :version</prepareSQL>
+                </statementDescriptor>
+                <statementMetadata>
+                    <javaMethod>
+                        <methodName>removeProduct</methodName>
+                        <sourceCodeLineNumber>41</sourceCodeLineNumber>
+                        <operationType>E</operationType>
+                        <annotation>
+                            <SQL type="U">update("DELETE FROM PRODUCT where SKU = :sku and VERSION = :version",product)</SQL>
+                        </annotation>
+                    </javaMethod>
+                </statementMetadata>
+            </statement>
+        </statements>
+    </statementSet>
+</programSet>
